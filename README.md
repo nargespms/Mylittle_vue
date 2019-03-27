@@ -1,1 +1,1 @@
-expnding a newspage with vuejs
+expanding a newspage with vuejs
