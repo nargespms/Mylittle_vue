@@ -15,6 +15,11 @@ const router = new VueRouter({
 
 })
 
+// FILTER
+Vue.filter('snippet',function(value){
+  return value.slice(0,200) + '...';
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#root',
