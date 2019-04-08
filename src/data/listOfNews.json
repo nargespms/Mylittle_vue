@@ -2,7 +2,7 @@
   {
     "_id": 4,
     "type":"InfoGraphic",
-    "categories":["economics","sports"],
+    "categories":"politic",
     "uptitle": "commodo cupidatat nisi nulla cupidatat cillum pariatur consequat",
     "title": "amet dolore esse et sit adipisicing",
     "isActive": false,
@@ -38,6 +38,7 @@
   {
     "_id": 5,
     "type":"Film",
+    "categories": "culture",
     "uptitle": "duis mollit proident consequat voluptate tempor",
     "title": "non ipsum voluptate id adipisicing pariatur",
     "isActive": false,
@@ -73,6 +74,7 @@
   {
     "_id": 6,
     "type":"Reporst",
+    "categories":"sports",
     "uptitle": "qui deserunt reprehenderit consequat aliquip",
     "title": "laborum Lorem labore anim aute ad laboris id veniam",
     "isActive": false,
@@ -108,6 +110,7 @@
   {
     "_id": 7,
     "type":"Notes",
+    "categories":"economics",
     "uptitle": "occaecat ad nulla ad voluptate mollit eu aute velit",
     "title": "veniam id incididunt culpa minim eu",
     "isActive": false,
@@ -143,6 +146,7 @@
   {
     "_id": 8,
     "type":"Gallery",
+    "categories": "religion",
     "uptitle": "officia sunt pariatur elit magna enim ut",
     "title": "eiusmod ea do esse dolore velit",
     "isActive": true,

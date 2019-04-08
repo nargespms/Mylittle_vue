@@ -6,12 +6,13 @@
       </div>
 
     <ul class="searchList">
-      <input type="text " v-model="search" placeholder="search news">
+      <!-- <input type="text " v-model="search" placeholder="search news"> -->
       <li class="clear" v-for="news in filteredNews" v-bind:key="news._id">
         <h3 class="uptitle defloat">{{news.uptitle}}</h3>
-        <h2 class="title defloat">{{news.title}}</h2>
         <span class="newType float">{{news.type}}</span>
+        <h2 class="title defloat">{{news.title}}</h2>
         <p class="defloat">{{news.about | snippet }}</p>
+        <span class="newType float">{{news.categories}}</span>
       </li>
     </ul>
 
@@ -25,15 +26,16 @@ export default {
   data() {
     return {
       newsList : newslist,
-      search: '',
+      // search: '',
     }
   },
   computed: {
     filteredNews : function(){
       return this.newsList.filter(news => {
-        // return news.title.match(this.search);
-        // return news.categories.match(this.selects.categories);
-        return news.type.match(this.selects.type);
+        return (news.categories.match(this.selects.categories) ||
+                news.type.match(this.selects.type)
+                // || news.title.match(this.search)
+                ) ;
       })
     },
     // for retrived data from searchform from store
