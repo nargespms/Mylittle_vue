@@ -2,6 +2,7 @@
   {
     "_id": 4,
     "type":"InfoGraphic",
+    "categories":["economics","sports"],
     "uptitle": "commodo cupidatat nisi nulla cupidatat cillum pariatur consequat",
     "title": "amet dolore esse et sit adipisicing",
     "isActive": false,
