@@ -12,28 +12,28 @@
       <div>
               <!-- news uptitle -->
           <h2 class="newsUptitle">
-              {{mynews.uptitle}}
+              {{news.uptitle}}
           </h2>
               <!-- news title -->
           <a :href="mynews.primaryPicture">
               <h1 class="newsTitle">
-                  {{mynews.title}}
+                  {{news.title}}
               </h1>
           </a>
               <!-- newsPrimaryPic -->
-          <a :href="mynews.primaryPicture" class="newsPrimaryPic_wrapper">
-              <img class="newsPrimaryPic" :src="mynews.primaryPicture" alt="" >
+          <a :href="news.primaryPicture" class="newsPrimaryPic_wrapper">
+              <img class="newsPrimaryPic" :src="news.primaryPicture" alt="" >
           </a>
               <!-- news lead -->
-          <p class="newsLead">{{mynews.lead}}</p>
+          <p class="newsLead">{{news.lead}}</p>
               <!-- newscontent -->
           <div class="newsContent" v-bind:style="{ fontSize: fontSize + 'px' }">
-              {{mynews.content}}
+              {{news.content}}
           </div>
           <div class="keywords">
               <i class="fa fa-tag  fa-rotate-90" aria-hidden="true"></i>
               <ul>
-                  <li v-for="tag in mynews.tags" v-bind:key="tag.index">
+                  <li v-for="tag in news.tags" v-bind:key="tag.index">
                       <span>{{tag}}</span>
                       <i class="fa fa-circle" aria-hidden="true"></i>
                   </li>
@@ -44,15 +44,23 @@
 </template>
 
 <script>
-import mainNewsData from '../../data/mainNewsData.json'
+// import mainNewsData from '../../data/mainNewsData.json'
 
 export default {
     name:'news',
     data() {
         return {
-            mynews : mainNewsData,
+            // my news : mainNewsData,
             fontSize: 14,
+            id:this.$rout.params.id,
+            news:{},
         }
+    },
+    created(){
+      this.$http.get('http://jsonplaceholder.typicode.com/posts/'+this.id).then(function(data) {
+        console.log(data);
+        this.news = data.body;
+      });
     }
 }
 </script>

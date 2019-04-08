@@ -1,5 +1,11 @@
 <template>
   <div class="searchList_wrapper">
+      <div class="input_params_search" v-if="(selects != 0)">
+        <h4> selected type : {{selects.type}} </h4>
+        <h4> selected categories : {{selects.categories}}</h4>
+      </div>
+
+
     <ul class="searchList">
       <input type="text " v-model="search" placeholder="search news">
       <li v-for="news in filteredNews" v-bind:key="news._id">
@@ -27,8 +33,16 @@ export default {
       return this.newsList.filter(news => {
         return news.title.match(this.search);
       })
+    },
+    // for retrived data from searchform from store
+    selects(){
+      // console.log(this.$store.state.news.categories);
+      return this.$store.state.news;
+      // console.log(this.$store.news);
     }
-  }
+  },
+
+
 }
 </script>
 
@@ -36,9 +50,16 @@ export default {
 .searchList_wrapper {
   width:60%;
   margin-top: 24px;
-  float:right;
-  padding-left:16px;
+  float:left;
+  padding-right:16px;
   box-sizing: border-box;
+  .input_params_search {
+    color:darkslategrey;
+    background-color: #fff;
+    padding:8px;
+    border:1px solid #1a7a74;
+    margin-bottom: 8px;
+  }
 }
 .searchList {
   background-color: #fff;
