@@ -17,7 +17,6 @@ import myheader from './components/header/myheader.vue';
 import NewsList from './components/elements/NewsList.vue';
 import wrappertab from './components/elements/wrappertab.vue';
 import survey from './components/content/survey.vue';
-// import mainNewsContent from './components/newsContent/mainNewsContent.vue';
 
 export default {
  components: {

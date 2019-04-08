@@ -1,6 +1,7 @@
 [
   {
     "_id": 4,
+    "type":"InfoGraphic",
     "uptitle": "commodo cupidatat nisi nulla cupidatat cillum pariatur consequat",
     "title": "amet dolore esse et sit adipisicing",
     "isActive": false,
@@ -35,6 +36,7 @@
   },
   {
     "_id": 5,
+    "type":"Film",
     "uptitle": "duis mollit proident consequat voluptate tempor",
     "title": "non ipsum voluptate id adipisicing pariatur",
     "isActive": false,
@@ -68,7 +70,8 @@
     "greeting": "Hello, Burton Santana! You have 7 unread messages."
   },
   {
-    "_id": 24,
+    "_id": 6,
+    "type":"Reporst",
     "uptitle": "qui deserunt reprehenderit consequat aliquip",
     "title": "laborum Lorem labore anim aute ad laboris id veniam",
     "isActive": false,
@@ -102,7 +105,8 @@
     "greeting": "Hello, Sexton Abbott! You have 8 unread messages."
   },
   {
-    "_id": 12,
+    "_id": 7,
+    "type":"Notes",
     "uptitle": "occaecat ad nulla ad voluptate mollit eu aute velit",
     "title": "veniam id incididunt culpa minim eu",
     "isActive": false,
@@ -136,7 +140,8 @@
     "greeting": "Hello, Nash Woodward! You have 5 unread messages."
   },
   {
-    "_id": 33,
+    "_id": 8,
+    "type":"Gallery",
     "uptitle": "officia sunt pariatur elit magna enim ut",
     "title": "eiusmod ea do esse dolore velit",
     "isActive": true,

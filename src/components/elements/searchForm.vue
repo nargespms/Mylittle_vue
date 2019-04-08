@@ -1,6 +1,6 @@
 <template>
   <div class="searchform_wrapper">
-    <form >
+    <form v-on:submit.prevent="sendProps">
       <div class="categories_wrapper">
         <label>categories:</label>
         <select v-model="news.categories">
@@ -38,6 +38,13 @@ export default {
       categories:['economics','sports','religion','culture','politic'],
       types : ['InfoGraphic','Film','Video','Reporst','Notes','Gallery']
     }
+  },
+  computed : {
+    },
+  methods: {
+    sendProps() {
+      this.$store.state.news = this.news;
+    }
   }
 }
 </script>
@@ -46,8 +53,7 @@ export default {
 .searchform_wrapper {
   background-color: #fff;
   width:40%;
-  padding-right: 16px;
-  float: left;
+  float: right;
   border:1px solid #1a7a74;
   margin-top:24px;
   box-sizing: border-box;
