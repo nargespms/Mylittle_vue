@@ -5,13 +5,13 @@
         <h4> selected categories : {{selects.categories}}</h4>
       </div>
 
-
     <ul class="searchList">
       <input type="text " v-model="search" placeholder="search news">
-      <li v-for="news in filteredNews" v-bind:key="news._id">
-        <h3 class="uptitle">{{news.uptitle}}</h3>
-        <h2 class="title">{{news.title}}</h2>
-        <p>{{news.about | snippet }}</p>
+      <li class="clear" v-for="news in filteredNews" v-bind:key="news._id">
+        <h3 class="uptitle defloat">{{news.uptitle}}</h3>
+        <h2 class="title defloat">{{news.title}}</h2>
+        <span class="newType float">{{news.type}}</span>
+        <p class="defloat">{{news.about | snippet }}</p>
       </li>
     </ul>
 
@@ -31,7 +31,9 @@ export default {
   computed: {
     filteredNews : function(){
       return this.newsList.filter(news => {
-        return news.title.match(this.search);
+        // return news.title.match(this.search);
+        // return news.categories.match(this.selects.categories);
+        return news.type.match(this.selects.type);
       })
     },
     // for retrived data from searchform from store
@@ -61,6 +63,7 @@ export default {
     margin-bottom: 8px;
   }
 }
+.newType { color: brown ;}
 .searchList {
   background-color: #fff;
   padding:8px;
@@ -79,6 +82,7 @@ export default {
     .uptitle {
       font-size: 16px;
       color:#1a7a74;
+      width: 100%;
     }
   }
 }
