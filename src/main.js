@@ -6,10 +6,12 @@ import VueRouter from 'vue-router';
 import './scss/main.scss';
 import Routes from './routes.js';
 import VueResource from 'vue-resource';
+// import axios from 'axios'
 import { store } from './store/store.js';
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
+// Vue.prototype.$http = axios;
 
 const router = new VueRouter({
   routes: Routes,

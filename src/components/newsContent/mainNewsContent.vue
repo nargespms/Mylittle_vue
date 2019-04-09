@@ -1,5 +1,5 @@
 <template>
-    <div class="main_news_content">
+    <div class="main_news_content ">
         <newsInfo/>
         <news/>
         <sendComment/>
@@ -23,4 +23,12 @@
       }
   }
 </script>
+
+<style lang="scss" scoped>
+.main_news_content {
+  width: 50%;
+  margin: auto;
+}
+</style>
+
 

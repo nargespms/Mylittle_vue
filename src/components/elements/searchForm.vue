@@ -39,8 +39,6 @@ export default {
       types : ['InfoGraphic','Film','Video','Reporst','Notes','Gallery']
     }
   },
-  computed : {
-    },
   methods: {
     sendProps() {
       this.$store.state.news = this.news;

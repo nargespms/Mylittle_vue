@@ -3,7 +3,7 @@
       <ul>
           <li class="listnews" v-for="item in items" v-bind:key="item._id">
             <h3 class="uptitle">{{item.uptitle}}</h3>
-            <h2 class="title">{{item.title}}</h2>
+             <router-link class="title" v-on:click="Sendnews" v-bind:to="'/news/' + item._id" ><h2 v-on:click="Sendnews">{{ item.title }}</h2></router-link>
             <p>{{item.about}}</p>
 
           </li>
@@ -12,15 +12,23 @@
 </template>
 
 <script>
-import listOfNews from '../../data/listOfNews.json'
+import listOfNews from '../../data/listOfNews.json';
 
 export default {
   name:'listOfNews',
-
   data(){
     return {
-      items : listOfNews
-
+      items : listOfNews,
+      id:this.$route.params.id,
+      // item: {},
+    }
+  },
+  methods : {
+    Sendnews() {
+      // this.id = this.item._id;
+      // console.log(this.id);
+      // console.log(this.$route.params.id);
+      this.$store.state.allnews = this.items;
     }
   }
 }
@@ -32,8 +40,9 @@ export default {
     border-bottom:1px solid #989898;
     .title {
       color:darkslategrey;
-      font-size: 18px;
+      font-size: 14px;
       padding:8px 0px;
+      display: block;
     }
     .uptitle {
       font-size: 16px;
