@@ -9,8 +9,10 @@ Vue.use(Vuex);
   state : {
      news: [
 
-     ]
+     ],
+     allnews: {},
+     singlenews:{}
   },
-  selected : 'false',
+
 })
 // console.log(state);
