@@ -1,8 +1,9 @@
 <template>
     <div class="uppermenu_wrapper">
       <ul>
-        <li><router-link to="/" exact> home page</router-link></li>
-        <li><router-link to="/search" exact> search page</router-link></li>
+        <li><router-link to="/" exact> home page </router-link></li>
+        <li><router-link to="/search" exact> search page </router-link></li>
+        <li><router-link to="/gallery" exact> gallery page </router-link></li>
       </ul>
     </div>
 </template>
@@ -21,7 +22,7 @@ export default {
 <style lang="scss" scoped>
 .uppermenu_wrapper {
 	float: left;
-	width: 50%;
+	width: 80%;
   ul {
     padding:8px;
     li {
