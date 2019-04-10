@@ -6,14 +6,16 @@
 
 
 <script>
-import homecmp from './homecmp.vue'
-import searchcmp from './searchcmp.vue'
+import homecmp from './homecmp.vue';
+import searchcmp from './searchcmp.vue';
+import gallery from './gallery.vue';
 
 
 export default {
  components: {
         homecmp,
         searchcmp,
+        gallery,
     },
 }
 </script>
